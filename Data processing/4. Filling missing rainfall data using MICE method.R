@@ -3,7 +3,7 @@ library(readxl)
 library(mice)
 
 
-precipitation_data <- read_excel("D:/Nepal/Rainfall Data/Rainfall/For MICE/Group 9/Group_9.xlsx")
+precipitation_data <- read_excel("Your folder path/4. example excel file.xlsx")
 
 
 
@@ -41,7 +41,7 @@ imputed_precipitation_data_df <- complete(imputed_precipitation_data)
 
 
 library(writexl)
-write_xlsx(imputed_precipitation_data_df, "D:/Nepal/Rainfall Data/Rainfall/For MICE/Group 9/Group_9_miced.xlsx")
+write_xlsx(imputed_precipitation_data_df, "Your folder path/Data filled using MICE.xlsx")
 
 
 densityplot(imputed_precipitation_data)
