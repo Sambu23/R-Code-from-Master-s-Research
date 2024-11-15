@@ -5,7 +5,7 @@ library(openxlsx)
 
 setwd("Your folder path")
 
-csv_files <- list.files(pattern = "\\.csv$") #example
+csv_files <- list.files(pattern = "\\.csv$") #use .xlsx extension for excel files
 
 # Initialize an empty data frame to store the combined data
 combined_csv <- data.frame()
