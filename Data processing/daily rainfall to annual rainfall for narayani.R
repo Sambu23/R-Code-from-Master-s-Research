@@ -4,11 +4,11 @@ library(readxl)
 library(openxlsx)
 
 # Set the working directory to the location of your Excel file
-setwd("D:/Nepal/Rainfall Data/Rainfall/For MICE/Annual_data_Narayani")
+setwd("Your working directory")
 
 # Define the input Excel file path and output file name
-input_file_path <- "Full data.xlsx"
-output_file_name <- "Narayani_AD.xlsx"
+input_file_path <- "1.example excel file.xlsx"
+output_file_name <- "Annual rainfall.xlsx"
 
 # Function to calculate total annual rainfall from daily data
 calculate_total_annual_rainfall <- function(input_file_path, output_file_name) {
