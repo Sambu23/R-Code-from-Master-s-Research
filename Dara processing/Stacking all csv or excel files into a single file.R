@@ -3,9 +3,9 @@ library(writexl)
 library(rio)
 library(openxlsx)
 
-setwd("D:/Nepal/climate data/temp filtered/sushant/Individual stations/1030")
+setwd("Your folder path")
 
-csv_files <- list.files(pattern = "\\.csv$")
+csv_files <- list.files(pattern = "\\.csv$") #example
 
 # Initialize an empty data frame to store the combined data
 combined_csv <- data.frame()
@@ -20,7 +20,7 @@ for (file in csv_files) {
 }
 
 # Save the combined data as an Excel file
-write.xlsx(combined_csv, file = "1030_combined_data.xlsx", rowNames = FALSE)
+write.xlsx(combined_csv, file = "Resulting excel file.xlsx", rowNames = FALSE)
 
 
 
