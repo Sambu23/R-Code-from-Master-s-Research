@@ -3,7 +3,7 @@ library(readxl)
 library(writexl)
 
 # Read the data from the Excel file
-file_path <- "D:/Nepal/Narayani DEM/Narayani river basin rainfall/hydrolocial moedling evpaotranspiration gauges/806 PET.xlsx"
+file_path <- " Your folder path/2. example excel file.xlsx"
 data <- read_excel(file_path)
 
 # Define the Blaney-Criddle function
@@ -17,7 +17,7 @@ calculate_PET <- function(Tmean, p) {
 data$PET <- mapply(calculate_PET, data$Tmean, data$p_value)
 
 # Write the new dataframe with PET values to a new Excel file
-output_file_path <- "D:/Nepal/Narayani DEM/Narayani river basin rainfall/hydrolocial moedling evpaotranspiration gauges/806 Blaney criddle.xlsx"
+output_file_path <- "Your folder path/output excel file.xlsx"
 write_xlsx(data, output_file_path)
 
 # Print a message to indicate completion
