@@ -11,7 +11,7 @@ library(ggfortify)
 library(factoextra)
 library(openxlsx)
 
-file_path <- "D:/Nepal/Rainfall Data/Lat_and_long_80.xlsx"
+file_path <- "Your folder path/C_1 example excel file.xlsx"
 data <- read_excel(file_path)
 
 coordinates <- data %>%
@@ -20,7 +20,7 @@ coordinates <- data %>%
 
 distance_matrix <- distm(coordinates)
 
-file_path2 <- "D:/Nepal/Rainfall Data/Rainfall/reshaped data/Total_annual_rainfall_of_80_perc/tranposed_for_clustering.xlsx"
+file_path2 <- "Your folder path/C_2 example excel file.xlsx"
 data0 <- read_excel(file_path2)
 
 data2<-data0 %>% select(-Rain_Station)
@@ -40,8 +40,6 @@ wssplot <- function(data2, nc = 15, seed = 1234) {
 wssplot(combined_data)
 
 KM2 <- kmeans(combined_data, 30)
-
-
 
 
 str(combined_data)
@@ -70,6 +68,6 @@ ggplot(data_with_clusters2, aes(x = Cluster, y = 1980, color = factor(Cluster)))
   geom_point() +
   labs(title = "K-means Clustering of Rainfall Stations")
 
-output_file <- "D:/Nepal/Rainfall Data/Rainfall/reshaped data/Total_annual_rainfall_of_80_perc/K_means_clustering_FINAL.xlsx"
+output_file <- "Your output path/K means clustering result.xlsx"
 
 openxlsx::write.xlsx(data_with_clusters2, output_file, row.names = TRUE)  # Corrected function call
