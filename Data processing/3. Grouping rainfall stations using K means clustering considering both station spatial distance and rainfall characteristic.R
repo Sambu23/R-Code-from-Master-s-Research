@@ -11,7 +11,7 @@ library(ggfortify)
 library(factoextra)
 library(openxlsx)
 
-file_path <- "Your folder path/C_1 example excel file.xlsx"
+file_path <- "Your folder path/3.1 example excel file.xlsx"
 data <- read_excel(file_path)
 
 coordinates <- data %>%
@@ -20,7 +20,7 @@ coordinates <- data %>%
 
 distance_matrix <- distm(coordinates)
 
-file_path2 <- "Your folder path/C_2 example excel file.xlsx"
+file_path2 <- "Your folder path/3.2 example excel file.xlsx"
 data0 <- read_excel(file_path2)
 
 data2<-data0 %>% select(-Rain_Station)
