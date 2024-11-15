@@ -7,7 +7,7 @@ library(openxlsx)
 setwd("Your working directory")
 
 # Define the input Excel file path and output file name
-input_file_path <- "1.example excel file.xlsx"
+input_file_path <- "1. example excel file.xlsx"
 output_file_name <- "Annual rainfall.xlsx"
 
 # Function to calculate total annual rainfall from daily data
