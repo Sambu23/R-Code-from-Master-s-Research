@@ -2,7 +2,7 @@ library(raster)
 library(openxlsx)
 
 # Set the working directory to your folder path
-setwd("D:/Nepal/Narayani DEM/input values/2004_2014/Potential Evapotranspiration 2004_2013/Resampled to desired pixel size after clip")
+setwd("Your folder path containing raster(.tif) files")
 
 # List all raster files in the directory
 raster_files <- list.files(pattern = "\\.tif$") # Assuming the files are TIFF format
@@ -23,5 +23,5 @@ for (file in raster_files) {
 result_df <- data.frame(FileName = file_names, MeanValue = mean_values)
 
 # Write to Excel file
-write.xlsx(result_df, "PET average value 2004 to 2013.xlsx")
+write.xlsx(result_df, "Spatial average value of raster.xlsx")
 
